@@ -18,7 +18,7 @@
             <!-- .container nos permite centrar el contenido de nuestro menu, esta clase es opcional y podemos encerrar el menu <nav> o incluir el contenedor dentro del <nav> -->
             <div class="container">
                 <!-- Nos sirve para agregar un logotipo al menu -->
-                <img src="{{asset('img/logo.png')}}" alt="Imagen de un logo" class="navbar-brand" width="4%" height="auto">
+                <img src="{{asset('img/logo2.png')}}" alt="Imagen de un logo" class="navbar-brand" width="5%" height="auto">
 
                 <!-- Nos permite usar el componente collapse para dispositivos moviles -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu de Navegacion">
@@ -28,24 +28,60 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a href="#" class="nav-link">Inicio <span class="sr-only">(Actual)</span></a>
+                            <a href="{{ route('init') }}" class="nav-link">Inicio <span class="sr-only">(Actual)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Blog
                             </a>
                             <div class="dropdown-menu" aria-labelledby="menu-categorias">
-                                <a href="#" class="dropdown-item">HTML</a>
-                                <a href="#" class="dropdown-item">CSS</a>
-                                <a href="#" class="dropdown-item">JS</a>
+                                <a href="{{route('html')}}" class="dropdown-item">HTML</a>
+                                <a href="{{route('css')}}" class="dropdown-item">CSS</a>
+                                <a href="{{route('js')}}" class="dropdown-item">JS</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Contacto</a>
+                            <a href="{{route('contacto')}}" class="nav-link">Contacto</a>
                         </li>
                     </ul>
 
-                    <form action="" class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item">
+                                <a href="{{route('administracion')}}" class="nav-link">Administracion</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+
+                    <form action="" class="form-inline ml-3 my-2 my-lg-0">
                         <input type="text" class="form-control mr-sm-2" placeholder="Buscar" arial-label="Buscar">
                         <button class="btn btn-primary my-s my-sm-0" type="submit">Buscar</button>
                     </form>
@@ -53,7 +89,7 @@
             </div>
         </nav>
 
-        <main>
+        <main class="pt-3 pb-3">
             @section('main')
 
             @show
