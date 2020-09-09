@@ -23,7 +23,7 @@ class ExampleTest extends DuskTestCase
         static::startChromeDriver();
     }
 
-    public function testBasicExample()
+    public function testLogin()
     {
         $user = factory(User::class)->create([
             'email' => 'kururuygiroro@hotmail.com',
@@ -37,4 +37,19 @@ class ExampleTest extends DuskTestCase
                 ->assertPathIs('/home');
         });
     }
+
+    public function testRegister()
+    {
+        $this->browse(function ($browser){
+            $browser->visit('/register')
+                ->type('name','cesar')
+                ->type('email','cesarrozasrm@gmail.com')
+                ->type('password','password')
+                ->type('password-confirm','password')
+                ->press('Register')
+                ->assertPathIs('/home');
+        });
+    }
+
+
 }
