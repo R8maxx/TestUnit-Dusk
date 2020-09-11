@@ -45,7 +45,7 @@ class ExampleTest extends DuskTestCase
                 ->type('name','cesar')
                 ->type('email','cesarrozasrm@gmail.com')
                 ->type('password','password')
-                ->type('password-confirm','password')
+                ->type('#password-confirm','password')
                 ->press('Register')
                 ->assertPathIs('/home');
         });

@@ -10,9 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53ec24ca-6636-48c9-b067-a480404bbba1" name="Default Changelist" comment="">
+    <list default="true" id="53ec24ca-6636-48c9-b067-a480404bbba1" name="Default Changelist" comment="Todas las pruebas y funcionales">
+      <change afterPath="$PROJECT_DIR$/phpunit.dusk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dusk.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dusk.local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Browser/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +21,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -157,14 +158,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\RM\test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\RM\test\app\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\RM\test" />
     </key>
   </component>
   <component name="RunManager">
@@ -181,8 +183,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599639190658</updated>
-      <workItem from="1599639191798" duration="18975000" />
+      <workItem from="1599639191798" duration="19469000" />
+      <workItem from="1599729339858" duration="5007000" />
+      <workItem from="1599805402538" duration="4083000" />
     </task>
+    <task id="LOCAL-00001" summary="Todas las pruebas y funcionales">
+      <created>1599664320088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599664320088</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,9 +210,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Todas las pruebas y funcionales" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todas las pruebas y funcionales" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="243" key="#Composer" timestamp="1599639288696">
@@ -215,9 +230,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728/-236.-1080.1920.1040@0.0.1366.728" timestamp="1599646072252" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1599660917478">
+    <state x="184" y="9" key="SettingsEditor" timestamp="1599738413126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-236.-1080.1920.1040@0.0.1366.728" timestamp="1599660917478" />
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728/-236.-1080.1920.1040@0.0.1366.728" timestamp="1599738413126" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1599664341574">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/-236.-1080.1920.1040@0.0.1366.728" timestamp="1599664341574" />
   </component>
 </project>
